@@ -8,7 +8,7 @@ public class Lesson {
         /* ВВОД И ВЫВОД ДАННЫХ */
 
         /* ВЫВОД ДАННЫХ */
-        // Вывод строки в консоль
+        // Вывод строки в консоль SOUT
         System.out.println("Привет, я Нико! И это введение в Java для моддинга в Minecraft!");
 
         // Также можно выводить переменные (будет выведено их ЗНАЧЕНИЕ)
@@ -24,7 +24,7 @@ public class Lesson {
         // Создаем объект Scanner для чтения ввода из консоли
         // System.in - стандартный поток ввода (клавиатура)
         Scanner scanner = new Scanner(System.in);
-
+        System.out.println("Введите целое число");
         // Чтение целого числа - следующий ввод ДОЛЖЕН БЫТЬ ЧИСЛОМ!
         int number = scanner.nextInt();
         System.out.println("Вы только что ввели: " + number);
@@ -32,7 +32,7 @@ public class Lesson {
         // Очистка буфера после nextInt() - очень важно!
         // nextInt() не потребляет символ новой строки, поэтому нам нужно его "прочитать"
         scanner.nextLine();
-
+        System.out.println("Введите текст");
         // Чтение целой строки (все что ввели до нажатия Enter)
         String input = scanner.nextLine();
         System.out.println("Вы теперь ввели (строку): " + input);
