@@ -30,19 +30,19 @@ public class Lesson {
         Scanner scanner = new Scanner(System.in);
 
 // Бесконечный цикл while(true) - будет работать, пока мы не прервем его break
-        while(true) {
+        while (true) {
             // Просим пользователя ввести математическую операцию
-            System.out.println("Type in the operation (plus or +, minus or -, multiply or *, divide or /)");
+            System.out.println("Введите тип операции (плюс или +, минус или -, умножить  или *, разделить или /)");
             // Читаем введенную операцию как строку
             String operation = scanner.next();
 
             // Запрашиваем первое число
-            System.out.println("Type in your first number!");
+            System.out.println("Введите первое число!");
             // Читаем первое число как целое число
             int number1 = scanner.nextInt();
 
             // Запрашиваем второе число
-            System.out.println("Type in your second number!");
+            System.out.println("Введите второе число!");
             // Читаем второе число как целое число
             int number2 = scanner.nextInt();
 
@@ -79,10 +79,10 @@ public class Lesson {
             }
 
             // Выводим красивую строку с результатом вычислений
-            System.out.println("Your result it " + number1 + " " + operation + " " + number2 + " = " + result);
+            System.out.println("Ваш результат: " + number1 + " " + operation + " " + number2 + " = " + result);
 
             // Спрашиваем пользователя, хочет ли он продолжить
-            System.out.println("\nDo you wish to calculate something else? y/n");
+            System.out.println("\nХотите продолжить? y/n");
 
             // Проверяем ответ пользователя
             // scanner.next() читает следующий ввод
