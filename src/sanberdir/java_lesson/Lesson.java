@@ -5,36 +5,37 @@ import java.util.Scanner;
 public class Lesson {
 
     public static void main(String[] arguments) {
-        String name = "Kaupenjoe";
-        String occupation = "YouTube";
+        /* МАССИВЫ */
 
-        occupation = occupation + "r";
+        String question1 = "Сколько штатов в США?";
+        String question2 = "Какова столица Великобритании?";
+        String question3 = "Какой химический символ у железа?";
 
-        System.out.println("Меня зовут " + name + " и я " + occupation);
+        String answer1 = "50";
+        String answer2 = "Лондон";
+        String answer3 = "Fe";
 
+        String[] questions = new String[3];
+        questions[0] = "Сколько штатов в США?";
+        questions[1] = "Какова столица Великобритании?";
+        questions[2] = "Какой химический символ у железа?";
 
-        String sentence = "Привет, чем ты занят?";
-        System.out.println(sentence);
+        String[] answers = new String[3];
+        answers[0] = "50";
+        answers[1] = "Лондон";
+        answers[2] = "Fe";
 
-        // Верхний регистр или нижний регистр
-        System.out.println("Нижний регистр: " + sentence.toLowerCase());
-        System.out.println("Верхний регистр: " + sentence.toUpperCase());
+        System.out.println(questions[0]);
+        System.out.println(answers[0]);
 
-        // Содержит ли строка
-        System.out.println("Содержит ли строка \"Howdy\": " + sentence.contains("Howdy"));
+        questions[0] = "Сколько лет Юэну Макгрегору (в 2021 году)?";
+        System.out.println(questions[0]);
+        System.out.println(answers[0]);
+        // Вывод длины массива
+        System.out.println(questions.length);
 
-        // Замена
-        System.out.println(sentence.replace("Привет", "Howdy"));
+        // ArrayIndexOutOfBoundsException (Раскомментируйте строку ниже)
+        // System.out.println(questions[3]);
 
-        // Символ по индексу
-        System.out.println(sentence.charAt(5));
-
-        // Исходная строка не изменяется
-        System.out.println(sentence);
-
-        Scanner scan = new Scanner(System.in);
-        String test = scan.next();
-
-        System.out.println(test.equals("Привет"));
     }
 }
