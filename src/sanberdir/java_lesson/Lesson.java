@@ -7,6 +7,7 @@ public class Lesson {
     public static void main(String[] arguments) {
         /* МАССИВЫ */
 
+        // Чтобы не вводить новые значения строк
         String question1 = "Сколько штатов в США?";
         String question2 = "Какова столица Великобритании?";
         String question3 = "Какой химический символ у железа?";
@@ -14,6 +15,7 @@ public class Lesson {
         String answer1 = "50";
         String answer2 = "Лондон";
         String answer3 = "Fe";
+        // Вводим массивом
 
         String[] questions = new String[3];
         questions[0] = "Сколько штатов в США?";
@@ -25,8 +27,8 @@ public class Lesson {
         answers[1] = "Лондон";
         answers[2] = "Fe";
 
-        System.out.println(questions[0]);
-        System.out.println(answers[0]);
+        System.out.println(questions[2]);
+        System.out.println(answers[2]);
 
         questions[0] = "Сколько лет Юэну Макгрегору (в 2021 году)?";
         System.out.println(questions[0]);
