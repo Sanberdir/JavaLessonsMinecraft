@@ -1,43 +1,43 @@
 package sanberdir.java_lesson;
 
-import java.util.Scanner;
-
 public class Lesson {
 
     public static void main(String[] arguments) {
-        /* МАССИВЫ */
 
-        // Чтобы не вводить новые значения строк
-        String question1 = "Сколько штатов в США?";
-        String question2 = "Какова столица Великобритании?";
-        String question3 = "Какой химический символ у железа?";
+        String[] questions = new String[4];
+        questions[0] = "Что означает WWW?";
+        questions[1] = "Какой океан является самым большим в мире?";
+        questions[2] = "В каком году объединились Восточная и Западная Германия?";
+        questions[3] = "Какова столица Франции?";
 
-        String answer1 = "50";
-        String answer2 = "Лондон";
-        String answer3 = "Fe";
-        // Вводим массивом
+        String[] answers = new String[4];
+        answers[0] = "Всемирная паутина";
+        answers[1] = "Тихий океан";
+        answers[2] = "1990";
+        answers[3] = "Париж";
 
-        String[] questions = new String[3];
-        questions[0] = "Сколько штатов в США?";
-        questions[1] = "Какова столица Великобритании?";
-        questions[2] = "Какой химический символ у железа?";
+        outputQuestionsAndAnswersXTimes(5, questions, answers);
+        System.out.println("----");
+        outputQuestionsAndAnswersXTimes(2, questions, answers);
+        System.out.println("----");
+        outputQuestionsAndAnswersXTimes(3, questions, answers);
+        System.out.println("----");
+        outputQuestionsAndAnswersXTimes(8, questions, answers);
+        System.out.println(sum(7,8));
+    }
+    private static void outputQuestionsAndAnswersXTimes(int x, String[] questions, String[] answers) {
+        for (int c = 0; c < x; c++) {
+            outputQuestionsAndAnswers(questions, answers);
+        }
+    }
 
-        String[] answers = new String[3];
-        answers[0] = "50";
-        answers[1] = "Лондон";
-        answers[2] = "Fe";
+    public static void outputQuestionsAndAnswers (String[] questions, String[] answers) {
+        for(int i = 0; i < questions.length; i++) {
+            System.out.println("Q: " + questions[i] + " | A: " + answers[i]);
+        }
+    }
 
-        System.out.println(questions[2]);
-        System.out.println(answers[2]);
-
-        questions[0] = "Сколько лет Юэну Макгрегору (в 2021 году)?";
-        System.out.println(questions[0]);
-        System.out.println(answers[0]);
-        // Вывод длины массива
-        System.out.println(questions.length);
-
-        // ArrayIndexOutOfBoundsException (Раскомментируйте строку ниже)
-        // System.out.println(questions[3]);
-
+    public static int sum(int a, int b) {
+        return a + b;
     }
 }
