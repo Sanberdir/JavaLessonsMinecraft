@@ -1,43 +1,62 @@
 package sanberdir.java_lesson;
 
+import java.util.*;
+
 public class Lesson {
 
     public static void main(String[] arguments) {
+        /* COLLECTIONS */
 
         String[] questions = new String[4];
-        questions[0] = "Что означает WWW?";
-        questions[1] = "Какой океан является самым большим в мире?";
-        questions[2] = "В каком году объединились Восточная и Западная Германия?";
-        questions[3] = "Какова столица Франции?";
+        questions[0] = "What does WWW stand for?";
+        questions[1] = "What is the World's largest Ocean?";
+        questions[2] = "Which Year did East and West Germany Unify?";
+        questions[3] = "What is the capital of France?";
 
         String[] answers = new String[4];
-        answers[0] = "Всемирная паутина";
-        answers[1] = "Тихий океан";
+        answers[0] = "World Wide Web";
+        answers[1] = "Pacific Ocean";
         answers[2] = "1990";
-        answers[3] = "Париж";
+        answers[3] = "Paris";
 
-        outputQuestionsAndAnswersXTimes(5, questions, answers);
-        System.out.println("----");
-        outputQuestionsAndAnswersXTimes(2, questions, answers);
-        System.out.println("----");
-        outputQuestionsAndAnswersXTimes(3, questions, answers);
-        System.out.println("----");
-        outputQuestionsAndAnswersXTimes(8, questions, answers);
-        System.out.println(sum(7,8));
-    }
-    private static void outputQuestionsAndAnswersXTimes(int x, String[] questions, String[] answers) {
-        for (int c = 0; c < x; c++) {
-            outputQuestionsAndAnswers(questions, answers);
+        List<String> moreQuestions = new ArrayList<>();
+        moreQuestions.add("Как дела?");
+        moreQuestions.clear();
+
+        List<Integer> pointsOnTest = new ArrayList<>();
+        pointsOnTest.add(19);
+        pointsOnTest.add(55);
+        pointsOnTest.add(78);
+
+
+        Set<String> countriesToVisit = new HashSet<>();
+        countriesToVisit.add("France");
+        countriesToVisit.add("Germany");
+        countriesToVisit.add("Spain");
+        countriesToVisit.add("France");
+
+        System.out.println(countriesToVisit);
+
+        Map<String, Integer> countryToPopulationMap = new HashMap<>();
+        countryToPopulationMap.put("USA", 331000000);
+        countryToPopulationMap.put("United Kingdom", 67330000);
+        countryToPopulationMap.put("Austria", 8950000);
+
+        System.out.println(countryToPopulationMap.get("USA"));
+        System.out.println(countryToPopulationMap.get("Germany"));
+
+        System.out.println(countryToPopulationMap);
+
+
+        moreQuestions.add("What website hosts most videos in the world?");
+        moreQuestions.add("What is the capital of Germany?");
+        for(int i = 0; i < moreQuestions.size(); i++) {
+            System.out.println(moreQuestions.get(i));
         }
-    }
 
-    public static void outputQuestionsAndAnswers (String[] questions, String[] answers) {
-        for(int i = 0; i < questions.length; i++) {
-            System.out.println("Q: " + questions[i] + " | A: " + answers[i]);
+        for(Map.Entry<String, Integer> entry : countryToPopulationMap.entrySet()) {
+            System.out.println("Key = " + entry.getKey() + " | Value = " + entry.getValue());
         }
-    }
 
-    public static int sum(int a, int b) {
-        return a + b;
     }
 }
