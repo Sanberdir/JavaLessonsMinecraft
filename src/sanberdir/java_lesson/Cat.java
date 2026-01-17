@@ -1,12 +1,12 @@
 package sanberdir.java_lesson;
 
-public class Dog extends Animal {
-    public Dog(String picture, String name, int age) {
+public class Cat extends Animal {
+    public Cat(String picture, String name, int age) {
         super(picture, name, age);
     }
 
     @Override
     public void makeSound() {
-        System.out.println("Woof");
+        System.out.println("Meow");
     }
 }
