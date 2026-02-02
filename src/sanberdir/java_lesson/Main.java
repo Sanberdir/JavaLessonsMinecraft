@@ -50,6 +50,5 @@ public class Main {
 
         int result = calculator.calculate(firstNumber, secondNumber);
         System.out.println(calculator.getOperationString() + " = " + result);
-
     }
 }
