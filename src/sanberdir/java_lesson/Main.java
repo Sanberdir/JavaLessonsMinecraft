@@ -1,15 +1,16 @@
 package sanberdir.java_lesson;
 
 public class Main {
-    public static void main(String[] args) {
-        Difficulty gameDifficulty = Difficulty.HARD;
-        System.out.println("Наша сложность " + gameDifficulty);
-
-        ToolMaterial swordMaterial = ToolMaterial.IRON;
-        ToolMaterial axeMaterial = ToolMaterial.STONE;
-
-        System.out.println("Мой меч имеет " + swordMaterial.getDurability() + " прочность");
-        System.out.println("Мой топор имеет " + axeMaterial.getDurability() + " прочность");
-        System.out.println("Топор добывает дерево со скоростью " + axeMaterial.getMiningSpeed());
+    public static void main(String[] args) throws Exception {
+        int x = 10;
+        try {
+            float a = 100 / 0;
+        } catch (Exception e) {
+            System.out.println("Это счастливое исключение " + e.getMessage());
+        }
+        System.out.println("I am happy!");
+        if (x < 100) {
+            throw new Exception("Это просто изумительно!");
+        }
     }
 }
